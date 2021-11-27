@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "768049435194",
+    "project_id": "t1digitalreporter",
+    "storage_bucket": "t1digitalreporter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768049435194:android:fb140b698f51697397db03",
+        "android_client_info": {
+          "package_name": "com.example.t1digitalreporter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768049435194-4fca4a83ubj4n3qdvqtjq337r7oto602.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtarRYhe22zYUY8Fkr8w3xG2JNIN20kUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768049435194-4fca4a83ubj4n3qdvqtjq337r7oto602.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
