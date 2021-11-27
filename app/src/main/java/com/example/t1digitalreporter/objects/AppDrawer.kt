@@ -60,7 +60,7 @@ class AppDrawer {
             .withToolbar( APP_ACTIVITY.mToolBar)
             .withActionBarDrawerToggle(true)
             .withSelectedItem(-1)
-            .withAccountHeader(mHeader)
+            //.withAccountHeader(mHeader)
             .addDrawerItems(
                 PrimaryDrawerItem().withIdentifier(100)
                     .withIconTintingEnabled(true)

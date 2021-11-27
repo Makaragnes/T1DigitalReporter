@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     private fun initFunc() {
         /* Функция инициализирует функциональность приложения */
         setSupportActionBar(mToolBar)
+        mAppDrawer.create()
 //        if (AUTH.currentUser != null) {
 //            mAppDrawer.create()
 //            //replaceFragment(MainListFragment(), false)
