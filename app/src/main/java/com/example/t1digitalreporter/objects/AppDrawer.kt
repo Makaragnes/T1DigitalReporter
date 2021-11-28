@@ -10,6 +10,8 @@ import com.example.t1digitalreporter.R
 import com.example.t1digitalreporter.database.USER
 import com.example.t1digitalreporter.ui.screens.contacts.ContactsFragment
 import com.example.t1digitalreporter.ui.screens.groups.AddContactsFragment
+import com.example.t1digitalreporter.ui.screens.qr.QRFragment
+import com.example.t1digitalreporter.ui.screens.report.ReportFragment
 import com.example.t1digitalreporter.utilits.APP_ACTIVITY
 import com.example.t1digitalreporter.utilits.downloadAndSetImage
 import com.example.t1digitalreporter.utilits.replaceFragment
@@ -72,34 +74,34 @@ class AppDrawer {
                 PrimaryDrawerItem().withIdentifier(101)
                     .withIconTintingEnabled(true)
                     .withName("Создать задачу")
-                    .withSelectable(false),
-                    //.withIcon(R.drawable.ic_baseline_work_24),
+                    .withSelectable(false)
+                    .withIcon(R.drawable.ic_baseline_work_24),
                 PrimaryDrawerItem().withIdentifier(102)
                     .withIconTintingEnabled(true)
                     .withName("Отчетность")
-                    .withSelectable(false),
-                    //.withIcon(R.drawable.ic_baseline_document_scanner_24),
+                    .withSelectable(false)
+                    .withIcon(R.drawable.ic_baseline_document_scanner_24),
                 PrimaryDrawerItem().withIdentifier(103)
                     .withIconTintingEnabled(true)
                     .withName("Клиенты")            // Инфа по клинетам
-                    .withSelectable(false),
-                    //.withIcon(R.drawable.ic_baseline_people_24),
+                    .withSelectable(false)
+                    .withIcon(R.drawable.ic_baseline_people_24),
                 PrimaryDrawerItem().withIdentifier(104)
                     .withIconTintingEnabled(true)
                     .withName("Настройки")
-                    .withSelectable(false),
-                    //.withIcon(R.drawable.ic_baseline_settings_24),
+                    .withSelectable(false)
+                    .withIcon(R.drawable.ic_baseline_settings_24),
                 DividerDrawerItem(),
                 PrimaryDrawerItem().withIdentifier(105)
                     .withIconTintingEnabled(true)
                     .withName("QR")
-                    .withSelectable(false),
-                    //.withIcon(R.drawable.ic_baseline_qr_code_24),
+                    .withSelectable(false)
+                    .withIcon(R.drawable.ic_baseline_qr_code_24),
                 PrimaryDrawerItem().withIdentifier(106)
                     .withIconTintingEnabled(true)
                     .withName("О продукте")
-                    .withSelectable(false),
-                    //.withIcon(R.drawable.ic_baseline_info_24)
+                    .withSelectable(false)
+                    .withIcon(R.drawable.ic_baseline_info_24),
             ).withOnDrawerItemClickListener(object : Drawer.OnDrawerItemClickListener {
                 override fun onItemClick(
                     view: View?,
@@ -116,7 +118,9 @@ class AppDrawer {
     private fun clickToItem(position:Int){
         when (position) {
             1 -> replaceFragment(AddContactsFragment())
+            2 -> replaceFragment(ReportFragment())
             3 -> replaceFragment(ContactsFragment())
+            6 -> replaceFragment(QRFragment())
             //1 -> replaceFragment(AddContactsFragment())
         }
     }
