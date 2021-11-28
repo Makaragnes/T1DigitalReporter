@@ -12,15 +12,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/ic_baseline_people_24"
+        android:src="@drawable/default_photo"
         app:civ_circle_background_color="@color/accent"
         android:layout_height="@dimen/toolbar_image_height"/>
 
     <TextView
         android:id="@+id/toolbar_chat_fullname"
         style="@style/normalText"
-        tools:text="Yura Petrov"
-        android:textColor="@color/accent"
+        tools:text="Ivan ivanov"
+        android:textColor="@color/ColorWhite"
         app:layout_constraintStart_toEndOf="@id/toolbar_chat_image"
         app:layout_constraintTop_toTopOf="@id/toolbar_chat_image"/>
 

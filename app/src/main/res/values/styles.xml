@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppThemeLight" parent="MaterialDrawerTheme">
+    <!-- Base application theme. -->
+    <style name="Theme.T1DigitalReporter" parent="MaterialDrawerTheme">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -26,7 +26,7 @@
     </style>
 
     <style name="AppThemeDark" parent="MaterialDrawerTheme">
-        <!--TODO Темная тема-->
+    <!--TODO Темная тема-->
     </style>
 
     <style name="actionMenu" parent="Theme.AppCompat.Light">
@@ -49,7 +49,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">@dimen/app_margin</item>
         <item name="android:textSize">@dimen/normalText</item>
-        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColor">@color/ColorYellowNote</item>
     </style>
 
     <style name="smallText">
@@ -87,5 +87,6 @@
         <item name="android:layout_margin">@dimen/app_margin</item>
         <item name="android:inputType">phone</item>
     </style>
+
 
 </resources>

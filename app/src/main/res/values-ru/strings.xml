@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">T1Report</string>
+    <string name="app_name">Telegram</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="settings_default_username">Ivan Ivanov</string>
+    <string name="settings_default_username">Yura Petrov</string>
     <string name="settings_default_status">в сети</string>
     <string name="settings_text_account">Аккаунт</string>
     <string name="settings_default_number">+791111111111</string>
     <string name="settings_label_phone_number">Нажмите, чтобы изменить номер телефона</string>
-    <string name="settings_default_login">ivanivanov</string>
+    <string name="settings_default_login">yurapetrov</string>
     <string name="settings_label_login">Имя пользователя</string>
     <string name="settings_default_bio">О себе</string>
     <string name="settings_label_bio">Напишите немного о себе</string>
@@ -30,7 +30,7 @@
     <string name="clear_chat">Очистить чат</string>
     <string name="delete_chat">Удалить чат</string>
     <string name="create_group">Создать задачу</string>
-    
+
     <plurals name="count_members">
         <item quantity="one">%d участник</item>
         <item quantity="few">%d участника</item>

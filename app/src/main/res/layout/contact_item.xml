@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/contact_fullname1"
-        style="@style/normalText"
+       style="@style/normalText"
         tools:text="Yura Petrov"
         app:layout_constraintStart_toEndOf="@id/contact_photo"
         app:layout_constraintTop_toTopOf="parent"/>

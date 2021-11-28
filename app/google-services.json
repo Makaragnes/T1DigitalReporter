@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "768049435194",
-    "project_id": "t1digitalreporter",
-    "storage_bucket": "t1digitalreporter.appspot.com"
+    "project_number": "960754275384",
+    "firebase_url": "https://t1reporter-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "t1reporter",
+    "storage_bucket": "t1reporter.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:768049435194:android:fb140b698f51697397db03",
+        "mobilesdk_app_id": "1:960754275384:android:6e7eca2072ebe88a7842cd",
         "android_client_info": {
           "package_name": "com.example.t1digitalreporter"
         }
       },
       "oauth_client": [
         {
-          "client_id": "768049435194-4fca4a83ubj4n3qdvqtjq337r7oto602.apps.googleusercontent.com",
+          "client_id": "960754275384-b54h3invs4bgojtlmkoh0o7iqjgtogqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.t1digitalreporter",
+            "certificate_hash": "630f99198446c30d0a529ee0ba78dd83c7fef83a"
+          }
+        },
+        {
+          "client_id": "960754275384-vanps4ck5u5jdccihh3pn9aobjk5lsnu.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAtarRYhe22zYUY8Fkr8w3xG2JNIN20kUI"
+          "current_key": "AIzaSyCHgnOBlv4G0VtwkG8ymWT-BYf_KGOs6UM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "768049435194-4fca4a83ubj4n3qdvqtjq337r7oto602.apps.googleusercontent.com",
+              "client_id": "960754275384-vanps4ck5u5jdccihh3pn9aobjk5lsnu.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

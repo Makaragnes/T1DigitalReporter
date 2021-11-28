@@ -23,7 +23,7 @@
             android:layout_height="0dp">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/chat_recycle_view"
-                android:background="@color/colorBlueWish"
+                android:background="@color/ColorLightBlack"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"/>
 
@@ -36,9 +36,9 @@
             android:id="@+id/chat_input_message"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Сообщение"
+            android:hint="Заметка"
             android:padding="@dimen/appPadding"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/ColorBlueNote"
             android:textColorHint="@color/colorGrey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/chat_btn_send_message"
@@ -83,3 +83,6 @@
     <include layout="@layout/choice_upload"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
