@@ -13,7 +13,9 @@ import androidx.core.content.PermissionChecker.checkPermission
 import androidx.fragment.app.Fragment
 import com.example.t1digitalreporter.MainActivity
 import com.example.t1digitalreporter.R
+import com.example.t1digitalreporter.database.updatePhonesToDatabase
 import com.example.t1digitalreporter.models.CommonModel
+import com.squareup.picasso.Picasso
 import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
@@ -30,24 +32,24 @@ fun restartActivity() {
     APP_ACTIVITY.finish()
 }
 
-//fun replaceFragment(fragment: Fragment, addStack: Boolean = true) {
-//    /* Функция расширения для AppCompatActivity, позволяет устанавливать фрагменты */
-//    if (addStack) {
-//        APP_ACTIVITY.supportFragmentManager.beginTransaction()
-//            .addToBackStack(null)
-//            .replace(
-//                R.id.data_container,
-//                fragment
-//            ).commit()
-//    } else {
-//        APP_ACTIVITY.supportFragmentManager.beginTransaction()
-//            .replace(
-//                R.id.data_container,
-//                fragment
-//            ).commit()
-//    }
-//
-//}
+fun replaceFragment(fragment: Fragment, addStack: Boolean = true) {
+    /* Функция расширения для AppCompatActivity, позволяет устанавливать фрагменты */
+    if (addStack) {
+        APP_ACTIVITY.supportFragmentManager.beginTransaction()
+            .addToBackStack(null)
+            .replace(
+                R.id.data_container,
+                fragment
+            ).commit()
+    } else {
+        APP_ACTIVITY.supportFragmentManager.beginTransaction()
+            .replace(
+                R.id.data_container,
+                fragment
+            ).commit()
+    }
+
+}
 
 
 fun hideKeyboard() {
@@ -57,43 +59,43 @@ fun hideKeyboard() {
     imm.hideSoftInputFromWindow(APP_ACTIVITY.window.decorView.windowToken, 0)
 }
 
-//fun ImageView.downloadAndSetImage(url: String) {
-//    /* Функция раширения ImageView, скачивает и устанавливает картинку*/
-//    Picasso.get()
-//        .load(url)
-//        .fit()
-//        .placeholder(R.drawable.default_photo)
-//        .into(this)
-//}
+fun ImageView.downloadAndSetImage(url: String) {
+    /* Функция раширения ImageView, скачивает и устанавливает картинку*/
+    Picasso.get()
+        .load(url)
+        .fit()
+        .placeholder(R.drawable.default_photo)
+        .into(this)
+}
 
-//fun initContacts() {
-//    /* Функция считывает контакты с телефонной книги, хаполняет массив arrayContacts моделями CommonModel */
-//    if (checkPermission(READ_CONTACTS)) {
-//        var arrayContacts = arrayListOf<CommonModel>()
-//        val cursor = APP_ACTIVITY.contentResolver.query(
-//            ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
-//            null,
-//            null,
-//            null,
-//            null
-//        )
-//        cursor?.let {
-//            while (it.moveToNext()) {
-//                /* Читаем телефонную книгу пока есть следующие элементы */
-//                val fullName =
-//                    it.getString(it.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
-//                val phone =
-//                    it.getString(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
-//                val newModel = CommonModel()
-//                newModel.fullname = fullName
-//                newModel.phone = phone.replace(Regex("[\\s,-]"), "")
-//                arrayContacts.add(newModel)
-//            }
-//        }
-//        cursor?.close()
-//        updatePhonesToDatabase(arrayContacts)
-//    }
-//}
+fun initContacts() {
+    /* Функция считывает контакты с телефонной книги, хаполняет массив arrayContacts моделями CommonModel */
+    if (checkPermission(READ_CONTACTS)) {
+        var arrayContacts = arrayListOf<CommonModel>()
+        val cursor = APP_ACTIVITY.contentResolver.query(
+            ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
+            null,
+            null,
+            null,
+            null
+        )
+        cursor?.let {
+            while (it.moveToNext()) {
+                /* Читаем телефонную книгу пока есть следующие элементы */
+                val fullName =
+                    it.getString(it.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME))
+                val phone =
+                    it.getString(it.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER))
+                val newModel = CommonModel()
+                newModel.fullname = fullName
+                newModel.phone = phone.replace(Regex("[\\s,-]"), "")
+                arrayContacts.add(newModel)
+            }
+        }
+        cursor?.close()
+        updatePhonesToDatabase(arrayContacts)
+    }
+}
 
 fun String.asTime(): String {
     val time = Date(this.toLong())
@@ -101,21 +103,21 @@ fun String.asTime(): String {
     return timeFormat.format(time)
 }
 
-//fun getFilenameFromUri(uri: Uri): String {
-//    var result = ""
-//    val cursor = APP_ACTIVITY.contentResolver.query(uri, null, null, null, null)
-//    try {
-//        if (cursor != null && cursor.moveToFirst()) {
-//            result = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME))
-//        }
-//    } catch (e: Exception) {
-//        showToast(e.message.toString())
-//    } finally {
-//        cursor?.close()
-//        return result
-//    }
-//}
+fun getFilenameFromUri(uri: Uri): String {
+    var result = ""
+    val cursor = APP_ACTIVITY.contentResolver.query(uri, null, null, null, null)
+    try {
+        if (cursor != null && cursor.moveToFirst()) {
+            result = cursor.getString(cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME))
+        }
+    } catch (e: Exception) {
+        showToast(e.message.toString())
+    } finally {
+        cursor?.close()
+        return result
+    }
+}
 
-//fun getPlurals(count:Int) = APP_ACTIVITY.resources.getQuantityString(
-//    R.plurals.count_members,count,count
-//)
+fun getPlurals(count:Int) = APP_ACTIVITY.resources.getQuantityString(
+    R.plurals.count_members,count,count
+)
